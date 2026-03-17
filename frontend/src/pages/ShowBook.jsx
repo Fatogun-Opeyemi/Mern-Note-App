@@ -14,7 +14,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:8004/api/v1/books/${id}`, {
+      .get(`https://mern-bookstore-backend-51bz.onrender.com/api/v1/books/${id}`, {
         headers: { Authorization: `Bearer ${user.token}` }
       })
       .then((response) => {

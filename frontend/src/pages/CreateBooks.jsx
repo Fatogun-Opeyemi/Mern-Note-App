@@ -24,7 +24,7 @@ const CreateBooks = () => {
     setLoading(true);
     axios
       .post(
-        'http://localhost:8004/api/v1/books',
+        'https://mern-bookstore-backend-51bz.onrender.com/api/v1/books',
         data,
         {
           headers: {

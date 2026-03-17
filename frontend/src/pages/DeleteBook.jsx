@@ -17,7 +17,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:8004/api/v1/books/${id}`, {
+      .delete(`https://mern-bookstore-backend-51bz.onrender.com/api/v1/books/${id}`, {
         headers: { Authorization: `Bearer ${user.token}` } // 3. Pass token
       })
       .then(() => {

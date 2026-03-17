@@ -5,8 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
-import BooksTable from '../components/home/BooksTable';
-import BooksCard from '../components/home/BooksCard';
+import BooksTable from '../components/Home/BooksTable';
+import BooksCard from '../components/Home/BooksCard'
 // import { enqueueSnackbar } from 'notistack';
 import { useSelector, useDispatch } from 'react-redux';
 import { useSnackbar } from 'notistack';
@@ -32,7 +32,7 @@ const Home = () => {
 
     setLoading(true);
     axios
-      .get('http://localhost:8004/api/v1/books', {
+      .get('https://mern-bookstore-backend-51bz.onrender.com/api/v1/books', {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

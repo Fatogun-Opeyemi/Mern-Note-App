@@ -20,7 +20,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
 
-    axios.get(`http://localhost:8004/api/v1/books/${id}`, {
+    axios.get(`https://mern-bookstore-backend-51bz.onrender.com/api/v1/books/${id}`, {
       headers: { Authorization: `Bearer ${user.token}` }
     })
       .then((response) => {
@@ -39,7 +39,7 @@ const EditBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
     axios
-      .patch(`http://localhost:8004/api/v1/books/${id}`, data, {
+      .patch(`https://mern-bookstore-backend-51bz.onrender.com/api/v1/books/${id}`, data, {
         headers: { Authorization: `Bearer ${user.token}` }
       })
       .then(() => {
