@@ -5,6 +5,10 @@ import cors from 'cors';
 
 const app = express();
 
+app.get('/health', (req, res) => {
+  res.status(200).json('ok');
+});
+
 app.use(express.urlencoded());
 app.use(express.json());
 app.use(cors());
